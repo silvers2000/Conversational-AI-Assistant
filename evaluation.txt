@@ -1,0 +1,43 @@
+Evaluating:   0%|          | 0/16 [00:00<?, ?it/s]Exception raised in Job[9]: IndexError(list index out of range)
+Evaluating:   6%|▋         | 1/16 [00:00<00:08,  1.72it/s]Exception raised in Job[5]: IndexError(list index out of range)
+Exception raised in Job[13]: IndexError(list index out of range)
+Evaluating:  19%|█▉        | 3/16 [00:00<00:02,  4.73it/s]Exception raised in Job[1]: IndexError(list index out of range)
+Evaluating:  38%|███▊      | 6/16 [00:13<00:01,  7.25it/s]Exception raised in Job[10]: RateLimitError(Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01k04jr2ttehb8ftr8zr9rf8xp` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 9148, Requested 3179. Please try again in 1m3.272s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+Evaluating:  69%|██████▉   | 11/16 [02:54<01:39, 19.83s/it]Exception raised in Job[4]: TimeoutError()
+Evaluating:  75%|███████▌  | 12/16 [03:00<01:06, 16.58s/it]Exception raised in Job[0]: TimeoutError()
+Exception raised in Job[6]: TimeoutError()
+Exception raised in Job[7]: TimeoutError()
+Exception raised in Job[8]: TimeoutError()
+Evaluating: 100%|██████████| 16/16 [03:00<00:00, 11.25s/it]
+Evaluation complete.
+\n--- RAG Evaluation Results ---
+                                          user_input  \
+0           Who is the team lead for Project Apollo?   
+1      What is the primary objective of the project?   
+2  What is the codename of the assistant being de...   
+3         Which LLM is used in the technology stack?   
+
+                                  retrieved_contexts  \
+0  [Project Apollo: An Overview\nProject Apollo i...   
+1  [is\n \nto\n \nmove\n \nbeyond\n \nreports\n \...   
+2  [Project Apollo: An Overview\nProject Apollo i...   
+3  [Technology Stack:\nThe core of Helios is buil...   
+
+                                            response  \
+0  The team lead for Project Apollo is Dr. Aris T...   
+1  Based on the provided context, the primary obj...   
+2  The codename of the assistant being developed ...   
+3  The LLM (Large Language Model) used in the tec...   
+
+                                           reference  faithfulness  \
+0             The project is led by Dr. Aris Thorne.           NaN   
+1  The primary objective is to create a proactive...           NaN   
+2               The assistant is codenamed 'Helios'.           NaN   
+3  The core is built on a proprietary Large Langu...           1.0   
+
+   answer_relevancy  context_recall  answer_correctness  
+0               NaN             1.0            0.680780  
+1               NaN             NaN                 NaN  
+2               NaN             NaN            0.732961  
+3               NaN             1.0            0.479341  
+\n----------------------------\n
