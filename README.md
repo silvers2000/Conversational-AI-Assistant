@@ -74,8 +74,3 @@ These results confirm that our RAG implementation is highly effective at both re
 
 As per the project guidelines, the application is fully integrated with **LangSmith** for LLM tracing. This allows us to monitor, debug, and evaluate every step of our RAG and agentic workflows.
 
-Below is a screenshot of a LangSmith trace for a RAG-based query, showing the retrieval step (`retriever`) and the subsequent call to the language model (`ChatGroq`).
-
-*(Here you can embed the LangSmith screenshot you provided)*
-![LangSmith Trace](https://i.imgur.com/your-image-url.png)
-*(To make the image above work, upload your screenshot to a site like [Imgur](https://imgur.com/upload) and replace the URL)*
